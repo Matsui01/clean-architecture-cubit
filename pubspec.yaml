@@ -25,9 +25,15 @@ dependencies:
   floor: ^1.4.2
   # Route Manager
   auto_route: ^7.7.1
+  # Auth
+  sign_in_with_apple: ^5.0.0
+  flutter_facebook_auth: ^6.0.1
+  google_sign_in: ^6.1.4
   # Others
   equatable: ^2.0.5
   oktoast: ^3.3.1
+  flutter_secure_storage: ^8.0.0
+  flutter_svg: ^2.0.7
 
 dev_dependencies:
   flutter_test:

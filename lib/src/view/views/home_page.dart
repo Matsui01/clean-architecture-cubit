@@ -3,18 +3,18 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../domain/models/order.dart';
-import '../cubits/order_state.dart';
-import '../cubits/orders_cubit.dart';
+import '../cubits/order/order_state.dart';
+import '../cubits/order/orders_cubit.dart';
 
 @RoutePage()
-class OrdersPage extends StatefulWidget {
-  const OrdersPage({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   @override
-  State<OrdersPage> createState() => _OrdersPageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _OrdersPageState extends State<OrdersPage> {
+class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();

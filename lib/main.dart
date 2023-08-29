@@ -1,3 +1,4 @@
+import 'package:clean_architecture_cubit/src/domain/repositories/auth_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -5,7 +6,8 @@ import 'src/config/router/app_router.dart';
 import 'src/config/themes/app_themes.dart';
 import 'src/domain/repositories/order_repository.dart';
 import 'src/get_it.dart';
-import 'src/view/cubits/orders_cubit.dart';
+import 'src/view/cubits/order/orders_cubit.dart';
+import 'src/view/cubits/splash/spash_cubit.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +28,11 @@ class MyApp extends StatelessWidget {
         BlocProvider(
           create: (context) => OrdersCubit(
             getIt<OrderRepository>(),
+          ),
+        ),
+        BlocProvider(
+          create: (context) => SpashCubit(
+            getIt<AuthRepository>(),
           ),
         ),
       ],
